@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './Card'
+import Header from './Header'
+// import React , {useState} from 'react' 
+import data from './data';
+
 
 function App() {
+//   const [add, setAdd] = useState(false)
+
+//   function toggle(){
+//     setAdd(prevState => !prevState)
+// }
+
+const card = data.map(item => {
+
+  return(
+
+    <Card 
+    // add={add} 
+    // toggle={toggle}
+    key={item.id}
+    on={item.on} 
+    {...item} 
+
+/>
+
+  )
+
+})
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+     <div className='faq-card' >{card}</div> 
     </div>
   );
 }
