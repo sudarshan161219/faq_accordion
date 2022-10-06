@@ -13,6 +13,9 @@ import { useState } from 'react';
 function App() {
 
   const  [questions, SingleQuestion] = useState(data)
+  function update (){
+    SingleQuestion(prevState => prevState)
+  }
 
   return(
      <main> 
@@ -31,7 +34,7 @@ function App() {
   <div className='main-faq'>
 {questions.map((question) => {
   return(
-  <Card key={question.id} {...question} />
+  <Card {...update} key={question.id} {...question} />
   )
 })}
 </div>
