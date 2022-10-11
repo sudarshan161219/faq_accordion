@@ -37,7 +37,7 @@ export default function Card(props){
   <ul>
     <li>
       <div className='heading-img'>
-        <h2 onClick={toggle} >{props.name}</h2>
+        <h2 onClick={toggle}  className={ set ? 'h2_bold' : ''} >{props.name}</h2>
        <img onClick={toggle} className={ set ? 'rotate-arrow' : ''}    src={arrowIcon} alt="icon"/>
 
       </div>

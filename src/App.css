@@ -40,7 +40,7 @@ table {
 	border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
 
 :root{
   --color-Verydarkdesaturatedblue: hsl(238, 29%, 16%);
@@ -58,7 +58,6 @@ body {
 	flex-direction: column;
     justify-content: center;
     background: linear-gradient(0deg, rgba(101,101,231,1) 0%, rgba(175,103,233,1) 100%) no-repeat center center fixed;
-
     margin: 1rem;
 	line-height: 1;
   font-family: 'Kumbh Sans', sans-serif;
@@ -121,9 +120,15 @@ body {
 }
 
 h2{
-  font-weight: 700;
+  word-spacing: 1px;
+  font-weight: 500;
   font-size: 0.9rem;
-  color: var(--color-Verydarkdesaturatedblue)
+  color: var( --color-Verydarkgrayishblue);
+}
+
+.h2_bold{
+  font-weight: 700;
+  color: var( --color-Verydarkdesaturatedblue);
 }
 
 
@@ -139,6 +144,7 @@ h2{
 }
 
 p{
+  line-height: 1.5;
   text-align: left;
   font-weight: 400;
   font-size: 0.9rem;
@@ -229,12 +235,13 @@ ul:last-child{
 }
 
 .box {
-  left: -347px;
-  top: 268px;
+  left: -409px;
+  top: 305px;
   display: block;
   position: absolute;
   width: 7rem;
 }
+
 
 .desktop-img {
   top: 200px;
@@ -260,19 +267,30 @@ ul:last-child{
 
 
 @media (min-width:1366px) {
+
+  h2{
+    font-size: 1rem;
+  }
+
 .faq-card{
   min-width: 800px;
 }
 
+.main-faq {
+  margin-right: 3.5rem;
+}
+
 .box {
-  left: -475px;
-  top: 325px;
+  left: -484px;
+  top: 292px;
   display: block;
   position: absolute;
   width: 9rem;
 }
+
+
 .desktop-img {
-  top: 200px;
+  top: 163px;
   left: -475px;
   width: 25rem;
   position: absolute;
@@ -281,12 +299,10 @@ ul:last-child{
 
 .Desktop-sec-img {
   left: -625px;
-  top: 91px;
+  top: 64px;
   width: 34rem;
   display: block;
-  /* z-index: 1; */
   position: absolute;
 }
-
 
 }
